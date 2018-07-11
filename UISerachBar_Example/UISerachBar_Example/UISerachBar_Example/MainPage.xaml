@@ -4,11 +4,17 @@
              xmlns:local="clr-namespace:UISerachBar_Example"
              x:Class="UISerachBar_Example.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="siguiente.png" Activated="RefButtonClicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>

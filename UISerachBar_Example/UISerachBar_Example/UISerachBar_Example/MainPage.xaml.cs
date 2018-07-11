@@ -13,5 +13,17 @@ namespace UISerachBar_Example
 		{
 			InitializeComponent();
 		}
-	}
+        //protected override void OnAppearing()
+        //{
+        //    var page = new ContentPage { Title = "Title" };
+        //    NavigationPage.SetHasNavigationBar(page, false);
+        //    var navigationPage = new NavigationPage(page);
+        //    base.OnAppearing();
+        //}
+        void RefButtonClicked(object sender, EventArgs e)
+        {
+            //Navigation.PopModalAsync(true);
+            DisplayAlert("Pop Up", "Message", "Ok");
+        }
+    }
 }
