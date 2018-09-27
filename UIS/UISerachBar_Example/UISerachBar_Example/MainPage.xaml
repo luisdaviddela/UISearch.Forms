@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:UISerachBar_Example"
              x:Class="UISerachBar_Example.MainPage">
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Icon="siguiente.png" Activated="RefButtonClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+    <ContentPage.Content>-->
 
         <StackLayout>
             <!-- Place new controls here -->
@@ -15,6 +15,6 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         </StackLayout>
-    </ContentPage.Content>
+
 
 </ContentPage>
