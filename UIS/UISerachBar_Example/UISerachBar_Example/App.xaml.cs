@@ -11,7 +11,7 @@ namespace UISerachBar_Example
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new MainPage());
+			MainPage = new NavigationPage(new UI_SearchView());
 		}
 
 		protected override void OnStart ()
