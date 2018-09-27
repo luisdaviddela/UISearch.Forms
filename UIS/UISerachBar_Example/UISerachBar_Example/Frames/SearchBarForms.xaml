@@ -3,30 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UISerachBar_Example.SearchBarForms">
     <ContentView.Content>
-        <Grid HorizontalOptions="Center">
-            <Frame BackgroundColor="White" 
+        <StackLayout>
+            <Grid HorizontalOptions="Center">
+                <Frame BackgroundColor="White" 
                     HasShadow="True"
                    IsClippedToBounds="True">
-                <Frame.OutlineColor>
-                    <OnPlatform x:TypeArguments="Color"
+                    <Frame.OutlineColor>
+                        <OnPlatform x:TypeArguments="Color"
                   Android="Gray"
                   iOS="Gray"/>
-                </Frame.OutlineColor>
-                <Frame.Margin>
-                    <OnPlatform x:TypeArguments="Thickness"
+                    </Frame.OutlineColor>
+                    <Frame.Margin>
+                        <OnPlatform x:TypeArguments="Thickness"
                   Android="5" iOS="5"/>
-                </Frame.Margin>
-                <Frame.Padding>
-                    <OnPlatform x:TypeArguments="Thickness"
+                    </Frame.Margin>
+                    <Frame.Padding>
+                        <OnPlatform x:TypeArguments="Thickness"
                   Android="0" iOS="0"/>
-                </Frame.Padding>
-                <Frame.Content>
-                    <StackLayout Orientation="Horizontal">
-                        <SearchBar Placeholder="Busca lo que quieras"/>
+                    </Frame.Padding>
+                    <Frame.Content>
+                        <StackLayout Orientation="Horizontal">
+                            <SearchBar Placeholder="Busca lo que quieras"
+                                   x:Name="Serach"
+                                   />
                         <Image Source="usuarios.png" HeightRequest="20"/>
-                    </StackLayout>
-                </Frame.Content>
-            </Frame>
-        </Grid>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+            </Grid>
+        </StackLayout>
     </ContentView.Content>
 </ContentView>

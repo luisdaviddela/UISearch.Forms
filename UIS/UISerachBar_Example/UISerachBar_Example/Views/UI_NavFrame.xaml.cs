@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace UISerachBar_Example
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchBarForms : ContentView
+	public partial class UI_NavFrame : ContentPage
 	{
-		public SearchBarForms ()
+		public UI_NavFrame ()
 		{
 			InitializeComponent ();
-        }
-    }
+		}
+	}
 }

@@ -3,14 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:UISerachBar_Example"
              x:Class="UISerachBar_Example.UI_SearchView">
+    
     <NavigationPage.TitleView>
-        <local:SearchBarForms></local:SearchBarForms>
+        <Frame BackgroundColor="White" 
+                    HasShadow="True"
+                   IsClippedToBounds="True">
+            <Frame.OutlineColor>
+                <OnPlatform x:TypeArguments="Color"
+                  Android="Gray"
+                  iOS="Gray"/>
+            </Frame.OutlineColor>
+            <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness"
+                  Android="5" iOS="5"/>
+            </Frame.Margin>
+            <Frame.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+            </Frame.Padding>
+            <Frame.Content>
+                <SearchBar Placeholder="Busca lo que quieras"
+                                   x:Name="Serach"
+                                   TextChanged="SearchBar_TextChanged"/>
+            </Frame.Content>
+        </Frame>
     </NavigationPage.TitleView>
+    
         <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <ListView x:Name="SuggestionListView"
+                          HasUnevenRows="True"/>
+                <Label Text="Saludos David" 
+                   FontAttributes="Bold"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
